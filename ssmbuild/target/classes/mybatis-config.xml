@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!--现在配置数据源，交给Spring去做只用取别名和映射mapping路径-->
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    <typeAliases>
+        <package name="com.yanghui.pojo"/>
+    </typeAliases>
+    <mappers>
+        <mapper class="com.yanghui.dao.BookMapper"></mapper>
+        <!--数据访问层写完了和以前mybatis不一样的是要把操作给业务层service，（本项目）业务层service的操作和数据访问层一样-->
+    </mappers>
+</configuration>
